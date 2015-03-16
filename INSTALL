@@ -1,0 +1,78 @@
+# INSTALL
+PowerShell scripting for Microsoft Dynamics CRM
+
+As a first requirement, I assume that you are a .NET developer 
+and that you have a Visual Studio development environment at disposal. 
+You should be fine using a Windows 7 SP1 or a Windows 2008 SP1 operating 
+system or higher. For information, the following examples uses 
+Visual Studio 2012 Professional edition, on a Windows 8 Professional desktop.
+
+Software requirements
+---------------------
+
+  - Windows .NET Framework 4.0
+  
+    Windows .NET Framework 4.0 is available here:
+    http://www.microsoft.com/en-US/download/details.aspx?id=17851
+
+  - Windows Management Framework 4.0
+  
+    Windows Management Framework 4.0 is available here:
+    http://www.microsoft.com/en-us/download/details.aspx?id=40855
+
+    The Windows Management Framework will install PowerShell 4.0 
+    on the computer if necessary. This update includes types required 
+    to create custom PowerShell commands. 
+    
+  - Windows Identity Foundation 3.5
+  
+    Windows Identity Foundation 3.5 is available here:
+    http://www.microsoft.com/en-US/download/details.aspx?id=17331
+    
+    The Windows Identity Foundation is a must have while developing 
+    for Dynamics CRM platform. It provides, among others features, 
+    pre-built security logic in order to connect to Dynamics CRM 
+    organizations implementing claims-based authentication.
+
+Set-up the IDE environment
+--------------------------
+
+  - PowerShell Integrated Scripting Environment (ISE)
+  
+    Windows PowerShell ISE is a graphic integrated development 
+    environment (IDE) edited by Microsoft. This IDE allows developers 
+    to write and run commands and debug scripts.
+    
+    On Windows 8 and Windows Server 2012, PowerShell Integrated Scripting 
+    Environment (ISE) is installed and enabled. 
+    
+    On Windows 2008 R2, PowerShell ISE is not enabled by default. 
+    You can use… PowerShell (!) as Administrator in order to 
+    activate this feature:
+    
+    Import-Module ServerManager Add-Windowsfeature PowerShell-ISE
+
+    On Windows 7 and Windows Server 2008 SP1, PowerShell ISE must be 
+    installed through the Windows Management Framework.
+    
+  - You can use NuGet in order to manage the required CRM SDK libraries 
+    needed in this project. NuGet is a Visual Studio extension which provide 
+    an easier way to manage .NET projects dependencies. 
+    The NuGet documentation is available here: http://docs.nuget.org/
+
+
+  - Unlock restricted execution Policies
+    In order to enforce security, PowerShell scripts executions are blocked 
+    by default. This policy is relevant since PowerShell main purpose is 
+    to provide administrative features.
+  
+    You will want to unblock PowerShell scripts execution through command line 
+    as Administrator. For example:
+  
+    Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+
+    For more information about Execution Policies: http://technet.microsoft.com/library/hh847748.aspx
+    
+If something goes wrong or is missing in this install guide, feel free to join 
+the discussion in the related blog post at:
+http://blog.canaple.fr/powershell-scripting-for-microsoft-dynamics-crm-requirements/.
