@@ -12,7 +12,7 @@ following related blog posts:
 
 - Requirements: http://blog.canaple.fr/powershell-scripting-for-microsoft-dynamics-crm-requirements/
 - A first cmdlet to connect: http://blog.canaple.fr/powershell-scripting-for-microsoft-dynamics-crm-a-first-cmdlet-to-connect/
-- Rename an attribute with PowerShell
+- Rename an attribute with PowerShell: http://blog.canaple.fr/powershell-scripting-for-microsoft-dynamics-crm-rename-attribute-using-a-cmdlet
 
 The Latest Version
 ------------------
